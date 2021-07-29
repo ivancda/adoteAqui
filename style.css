@@ -1,0 +1,143 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(243,176,100,1) 150%); 
+  border-radius: 10px;
+  margin: 5vh;
+  margin-bottom: 0;
+  box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, 0.5);
+}
+.maint{
+  font-size: 3em;
+  margin: 1em;
+}
+.cabecalho ul{
+  list-style: none;
+  display: flex;
+}
+.cabecalho ul li{
+  font-size: 1.5em;
+  margin: 1em;
+  
+}
+.fullbody{
+  justify-content: center;
+  display: flex;
+  margin: 5vh;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.5);
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(243,176,100,1) 150%); 
+}
+.fullbody a:link{
+  text-decoration: none;
+  color:dodgerblue;
+}
+.fullbody a:visited{
+  color: dodgerblue;
+}
+.fullbody a:hover{
+  color: crimson;
+}
+.texto{
+  max-width: 40vh;
+  margin: 10vh;
+  font-size: 2em;
+}
+.catalogoPet{
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+.petbox{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 25vh;
+  margin: 5vh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.petbox p{
+  margin-top: 1px;
+}
+.petbox:hover{
+  background-color: gainsboro;
+}
+img {
+  max-width: 80%;
+  max-height: 80%;  
+  border-radius: 5px;
+}
+.hlWord{
+  color: salmon;
+  font-weight: 900;
+}
+.rodape{
+  display: grid;
+  grid-template-areas: "rod1 rod2"
+                       "rod3 rod3";
+  
+  min-height: 20vh;
+  background-color:rgb(255, 188, 144);
+  font-size: 1em;  
+}
+.rod1 ul, .rod2 ul{
+  list-style: none;
+  margin: 5vh;
+}
+.rod1{
+  display: flex;
+  grid-area: rod1;
+}
+.rod2{
+  display: flex;
+  flex-direction: row-reverse;
+  grid-area: rod2;
+}
+.rod3{
+  grid-area: rod3;
+  text-align: center;
+}
+@media (max-width: 1080px){
+  .catalogoPet{
+    grid-template-columns: auto auto;
+  }
+  .fullbody{
+    flex-direction: column;
+    align-items: center;
+  }
+  .maint{
+    font-size: 1.5em;
+  }
+  .texto{
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 700px){
+  .cabecalho{
+    flex-direction: row-reverse;
+  }
+  .cabecalho ul{
+    flex-direction: column;
+  }
+  .catalogoPet{
+    grid-template-columns: auto;
+  }
+  .maint{
+    font-size: 1em;
+  }
+}
