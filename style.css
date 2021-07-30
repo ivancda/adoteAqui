@@ -15,8 +15,13 @@
   box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, 0.5);
 }
 .maint{
+  display: flex;
+  align-items: center;
   font-size: 3em;
   margin: 1em;
+}
+.maint img{
+  height: 2em;
 }
 .cabecalho ul{
   list-style: none;
@@ -54,7 +59,7 @@
 .catalogoPet{
   background-color: rgba(255, 255, 255, 0);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   justify-content: center;
 }
 .petbox{
@@ -75,6 +80,9 @@
 }
 .petbox:hover{
   background-color: gainsboro;
+  height: 35vh;
+  width: 30vh;
+  transition: 0.1s;
 }
 img {
   max-width: 80%;
@@ -91,7 +99,7 @@ img {
                        "rod3 rod3";
   
   min-height: 20vh;
-  background-color:rgb(255, 188, 144);
+  background-color:rgb(240, 194, 143);
   font-size: 1em;  
 }
 .rod1 ul, .rod2 ul{
@@ -111,6 +119,12 @@ img {
   grid-area: rod3;
   text-align: center;
 }
+@media (max-width: 1440px){
+  .catalogoPet{
+    grid-template-columns: auto auto auto;
+  }
+}
+
 @media (max-width: 1080px){
   .catalogoPet{
     grid-template-columns: auto auto;
